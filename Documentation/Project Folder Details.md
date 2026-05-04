@@ -62,14 +62,6 @@ NightlifeMobileApp/
 
 ├── assets/
 
-│   ├── adaptive-icon.png
-
-│   ├── favicon.png
-
-│   ├── icon.png
-
-│   └── splash-icon.png
-
 ├── components/
 
 ├── Documentation/
