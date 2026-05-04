@@ -1,4 +1,4 @@
-**Dependencies to install (in this order)**
+#### **Dependencies to install (in this order)**
 
 
 
@@ -7,7 +7,7 @@
 
 
 
-**Command Used to Create Project:** npx create-expo-app NightlifeApp --template blank-typescript
+##### **Command Used to Create Project:** npx create-expo-app NightlifeApp --template blank-typescript
 
 
 
@@ -34,11 +34,55 @@ node\_modules/ — all your installed libraries, auto-generated, never edit anyt
 
 
 
-**How to run live preview**
+#### **How to run live preview**
 
 
 
 1. Run: ***npx expo start*** in your terminal inside the project folder to start the server hosting the preview
 2. Download/open the **Expo Go** app on your phone
 3. Scan the QR code from the terminal on your phone
+
+
+
+#### **Project Folder Structure**
+
+NightlifeMobileApp/
+
+├── app/
+
+│   ├── (tabs)/
+
+│   │   ├── \_layout.tsx
+
+│   │   └── index.tsx
+
+│   ├── venue/
+
+├── assets/
+
+│   ├── adaptive-icon.png
+
+│   ├── favicon.png
+
+│   ├── icon.png
+
+│   └── splash-icon.png
+
+├── components/
+
+├── Documentation/
+
+├── services/
+
+├── .gitignore
+
+├── app.json
+
+├── package.json
+
+├── package-lock.json
+
+├── README.md
+
+└── tsconfig.json
 
