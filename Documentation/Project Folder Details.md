@@ -15,7 +15,7 @@ npx create-expo-app NightlifeApp --template blank-typescript
 
 
 
-**Default Project Files** 
+## **Default Project Files** 
 App.tsx — the entry point of your app, the first screen that loads
 
 index.ts — registers the app with React Native, you won't touch this
