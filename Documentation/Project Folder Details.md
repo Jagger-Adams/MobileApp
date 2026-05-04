@@ -1,13 +1,24 @@
-# **Dependencies to install (in this order)**
+# **Dependencies to Install (in this order)**
 
 
 
 1. Download node.js using the install wizard: https://nodejs.org/en/download
-2. npm install -g expo-cli eas-cli
+2. Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+3. npm install -g expo-cli eas-cli
 
 
 
-## **Command Used to Create Project:** 
+# **Initial Clone/Setup**
+
+1. git clone https://github.com/Jagger-Adams/MobileApp.git
+2. cd MobileApp
+3. npm install
+
+
+
+## **Command Used to Create Project:**
+
+**(You don't need to do this)**
 
 npx create-expo-app NightlifeApp --template blank-typescript
 
@@ -15,7 +26,8 @@ npx create-expo-app NightlifeApp --template blank-typescript
 
 
 
-## **Default Project Files** 
+## **Default Project Files**
+
 App.tsx — the entry point of your app, the first screen that loads
 
 index.ts — registers the app with React Native, you won't touch this
@@ -36,13 +48,15 @@ node\_modules/ — all your installed libraries, auto-generated, never edit anyt
 
 
 
-# **How to run live preview**
+# **How to Run Live Preview**
 
 
 
 1. Run: ***npx expo start*** in your terminal inside the project folder to start the server hosting the preview
 2. Download/open the **Expo Go** app on your phone
 3. Scan the QR code from the terminal on your phone
+
+(phone and computer must be on same network)
 
 
 
