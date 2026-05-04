@@ -1,4 +1,4 @@
-#### **Dependencies to install (in this order)**
+# **Dependencies to install (in this order)**
 
 
 
@@ -7,7 +7,9 @@
 
 
 
-##### **Command Used to Create Project:** npx create-expo-app NightlifeApp --template blank-typescript
+## **Command Used to Create Project:** 
+
+npx create-expo-app NightlifeApp --template blank-typescript
 
 
 
@@ -34,7 +36,7 @@ node\_modules/ — all your installed libraries, auto-generated, never edit anyt
 
 
 
-#### **How to run live preview**
+# **How to run live preview**
 
 
 
@@ -44,7 +46,7 @@ node\_modules/ — all your installed libraries, auto-generated, never edit anyt
 
 
 
-#### **Project Folder Structure**
+# **Project Folder Structure**
 
 NightlifeMobileApp/
 
