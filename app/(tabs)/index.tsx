@@ -1,15 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+import BarCard from '@/components/BarCard';
+import { Bar } from '@/types/Bar';
+
+const testBar: Bar = {
+  id: '1',
+  name: "Delilah's",
+  type: 'Cocktail Bar',
+  address: 'King St W',
+  busyness: 3,
+};
+
+export default function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Text>Nightlife mobile app placeholder text!!</Text>
-      <StatusBar style="auto" />
+    <View style={{ flex: 1, padding: 16 }}>
+      <BarCard bar={testBar} />
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
