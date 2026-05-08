@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import { Bar } from '@/types/Bar';
 import scale from '@/utils/scale';
 
@@ -22,6 +23,12 @@ const getBusynessBackgroundColor = (level: number): string => {
     return 'rgba(224, 92, 92, 0.4)';
 };
 
+const getBusynessGradientColor = (level: number): string => {
+    if (level === 1) return 'rgba(78, 203, 135, 0.2)';
+    if (level === 2) return 'rgba(232, 184, 109, 0.2)';
+    return 'rgba(224, 92, 92, 0.2)';
+};
+
 const StatusCapsule = ({ level }: { level: number }) => {
   return (
     <View style={[styles.capsule, { backgroundColor: getBusynessBackgroundColor(level)}]}>
@@ -42,6 +49,12 @@ const StatusBar = ({ level }: { level: number }) => {
 const BarCard = ({ bar }: { bar: Bar }) => {
   return (
     <View style={styles.card}>
+        <LinearGradient
+        colors={[getBusynessGradientColor(bar.busyness), 'transparent']}
+        start={{ x: 1, y: 0 }}
+        end={{ x: 0, y: 1 }}
+        style={styles.glow}
+      />
       <View style={styles.row}>
         <View style={styles.col}>
           <Text style={styles.name}>{bar.name}</Text>
@@ -59,9 +72,10 @@ const styles = StyleSheet.create({
   card: {
     flexDirection: 'column',
     borderRadius: 16,
-    backgroundColor: '#3f3954',
+    backgroundColor: '#111111',
     padding: 16,
-    gap: 12
+    gap: 12,
+    overflow: 'hidden',
   },
   row: {
     flexDirection: 'row',
@@ -72,7 +86,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     gap: 4
   },
-  name: { fontSize: scale(32), color: 'white' },
+  name: { fontSize: scale(32), color: 'white', fontFamily: 'BebasNeue' },
   sub: { fontSize: scale(16), color: 'white' },
   capsule: {
     paddingHorizontal: 16,
@@ -86,6 +100,13 @@ const styles = StyleSheet.create({
     fontSize: scale(24),
     fontWeight: '500',
   },
+  glow: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    width: '100%',
+    height: 150,
+  }
 });
 
 export default BarCard;
